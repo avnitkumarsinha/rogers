@@ -1,0 +1,901 @@
+.chat-fixed-container-pri {
+  position: fixed;
+  bottom  : 35px;
+  z-index : 999;
+}
+
+#PrimaryCTALP a {
+  text-decoration: none;
+}
+
+/* font-family may need to change */
+
+#PrimaryCTALP p.bub-text-pri {
+  font-family: "Tele-GroteskFet", "Tele-Fet", "Tele-Grotesk-Next-Medium", Sans-Serif;
+}
+
+#PrimaryCTALP p.bub-text-pri-normal {
+  font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.chat-fixed-container-pri,
+.chat-fixed-container-pri>div {
+  -webkit-box-sizing: border-box;
+  box-sizing        : border-box;
+}
+
+.chat-fixed-container-pri {
+  -webkit-transition      : all 0.5s cubic-bezier(0, 1.19, 1, 1.12);
+  -o-transition           : all 0.5s cubic-bezier(0, 1.19, 1, 1.12);
+  transition              : all 0.5s cubic-bezier(0, 1.19, 1, 1.12);
+  -webkit-transition-delay: 0.75s;
+  -o-transition-delay     : 0.75s;
+  transition-delay        : 0.75s;
+  -webkit-box-sizing      : border-box;
+  box-sizing              : border-box;
+}
+
+.chat-fixed-container-pri.show {
+  right: 0;
+}
+
+.chat-fixed-container-pri.peak {
+  right: 20px;
+}
+
+.chat-container-pri {
+  position: absolute;
+  bottom  : 0px;
+  right   : 10px;
+}
+
+.chat-container-avoid-arrow-pri {
+  position: absolute;
+  bottom  : 48px;
+  right   : 10px;
+}
+
+.chat-dismiss-pri {
+  background-size   : 50%;
+  background        : url("https://www.t-mobile.com/content/dam/t-mobile/ntm/branding/icons/iconography/dismiss.svg") center center no-repeat;
+  border-radius     : 100%;
+  color             : #fff;
+  cursor            : pointer;
+  display           : block;
+  height            : 40px;
+  position          : absolute;
+  right             : -5px;
+  top               : -41px;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition        : -webkit-transform 0.5s ease;
+  -o-transition     : transform 0.5s ease;
+  transition        : transform 0.5s ease;
+  transition        : transform 0.5s ease, -webkit-transform 0.5s ease;
+  width             : 40px;
+}
+
+@media only screen and (min-width: 728px) {
+  .chat-bubble-pri:hover {
+    -webkit-box-shadow: 0px 8px 25px rgba(227, 0, 118, 0.44);
+    box-shadow        : 0px 8px 25px rgba(227, 0, 118, 0.44);
+  }
+
+  .chat-dismiss-pri:hover {
+    -webkit-transform : scale(1.2);
+    -ms-transform     : scale(1.2);
+    transform         : scale(1.2);
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition        : -webkit-transform 0.1s ease;
+    -o-transition     : transform 0.1s ease;
+    transition        : transform 0.1s ease;
+    transition        : transform 0.1s ease, -webkit-transform 0.1s ease;
+  }
+}
+
+.chat-dismiss-pri:active {
+  -webkit-transform: scale(1.4);
+  -ms-transform    : scale(1.4);
+  transform        : scale(1.4);
+}
+
+.chat-dismiss-pri.small {
+  -webkit-transform: scale(0);
+  -ms-transform    : scale(0);
+  transform        : scale(0);
+}
+
+.chat-bubble-pri,
+.chat-bubble-pri-sp {
+  background-image  : -webkit-gradient(linear, left top, right top, color-stop(0, #b853bc), to(#e20074));
+  background-image  : -o-linear-gradient(left, #b853bc 0, #e20074 100%);
+  background-image  : linear-gradient(90deg, #b853bc 0, #e20074 100%);
+  -webkit-box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.16);
+  box-shadow        : 0 2px 13px 0 rgba(0, 0, 0, 0.16);
+  background-size   : 100%;
+  background-color  : #be48b3;
+  height            : 48px;
+  border-radius     : 24px;
+  padding           : 0 17px 0 52px;
+  position          : relative;
+  z-index           : 2;
+  cursor            : pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing        : border-box;
+}
+
+.chat-bubble-pri {
+  min-width: 210px;
+}
+
+.chat-bubble-pri-sp-width {
+  min-width: 150px;
+}
+
+.chat-bubble-pri.play-pri {
+  -webkit-animation-name           : bubResize-pri;
+  animation-name                   : bubResize-pri;
+  -webkit-animation-duration       : 30s;
+  animation-duration               : 30s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+}
+
+.chat-bubble-pri.chat-bubble-pri-sp-width.play-pri {
+  -webkit-animation-name: bubResize-pri-sp;
+  animation-name        : bubResize-pri-sp;
+}
+
+.chat-fixed-container-pri.peak .chat-bubble-pri {
+  min-width: 210px;
+}
+
+.chat-bubble-pri:after {
+  content   : "";
+  background: url("https://www.t-mobile.com//content/dam/t-mobile/ntm/branding/icons/iconography/chat-tip.svg");
+  position  : absolute;
+  display   : block;
+  bottom    : -11px;
+  left      : 20px;
+  height    : 20px;
+  width     : 18px;
+  z-index   : 0;
+}
+
+.bub-text-pri-container-pri {
+  display   : block;
+  overflow-y: hidden;
+  height    : 100%;
+  width     : 100%;
+  overflow  : none;
+}
+
+.note-num-pri {
+  position     : absolute;
+  top          : 0;
+  left         : 0;
+  background   : red;
+  content      : "1";
+  display      : block;
+  height       : 17px;
+  width        : 17px;
+  color        : #fff;
+  border-radius: 100%;
+  z-index      : 3;
+  font-size    : 12px;
+  font-family  : sans-serif;
+  line-height  : 17px;
+  text-align   : center;
+  font-weight  : 800;
+  opacity      : 0;
+}
+
+.num1-pri {
+  -webkit-animation-name     : noteUp-pri;
+  animation-name             : noteUp-pri;
+  -webkit-animation-duration : 0.5s;
+  animation-duration         : 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode        : forwards;
+}
+
+.num2-pri {
+  -webkit-animation-name     : noteUp-pri;
+  animation-name             : noteUp-pri;
+  -webkit-animation-duration : 0.5s;
+  animation-duration         : 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode        : forwards;
+}
+
+.bub-text-pri {
+  font-size     : 16px !important;
+  color         : #fff !important;
+  line-height   : 47px !important;
+  letter-spacing: 0.02em !important;
+  margin        : 0 !important;
+  padding       : 0 !important;
+}
+
+.bub-text-pri.normal-font {
+  font-size: 15px !important;
+}
+
+.bub-text-pri p {
+  color      : #fff;
+  line-height: 47px;
+}
+
+.bub-text-pri img {
+  vertical-align: middle;
+}
+
+.chat-copy-pri {
+  -webkit-animation-name           : chat1-pri;
+  animation-name                   : chat1-pri;
+  -webkit-animation-duration       : 1s;
+  animation-duration               : 1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+}
+
+.chat-copy2-pri {
+  -webkit-transform                : translateY(0);
+  -ms-transform                    : translateY(0);
+  transform                        : translateY(0);
+  -webkit-animation-name           : chatUp-pri;
+  animation-name                   : chatUp-pri;
+  -webkit-animation-duration       : 7s;
+  animation-duration               : 7s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+}
+
+.chat-copy3-pri {
+  -webkit-transform                : translateY(0);
+  -ms-transform                    : translateY(0);
+  transform                        : translateY(0);
+  -webkit-animation-name           : chatUp2-pri;
+  animation-name                   : chatUp2-pri;
+  -webkit-animation-duration       : 7s;
+  animation-duration               : 7s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+  -webkit-transform                : translate3d(0, 0, 0);
+}
+
+.chat-bubble-pri:before {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);
+  box-shadow        : inset 0 0 3px rgba(0, 0, 0, 0.25);
+  height            : 25px;
+  width             : 25px;
+  display           : block;
+}
+
+.chat-avatar-pri {
+  background-size: contain;
+  position       : absolute;
+  top            : 7px;
+  left           : 9px;
+  height         : 33px;
+  width          : 33px;
+  display        : block;
+  opacity        : 0;
+  z-index        : 2;
+}
+
+.ava1-pri {
+  background-image                 : url("https://www.t-mobile.com//content/dam/t-mobile/ntm/branding/icons/iconography/tgirl.png");
+  -webkit-animation-name           : ava1-pri;
+  animation-name                   : ava1-pri;
+  -webkit-animation-duration       : 2s;
+  animation-duration               : 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+}
+
+.ava2-pri {
+  background-image                 : url("https://www.t-mobile.com//content/dam/t-mobile/ntm/branding/icons/iconography/chaticon.svg");
+  -webkit-animation-name           : ava2-pri;
+  animation-name                   : ava2-pri;
+  -webkit-animation-duration       : 3s;
+  animation-duration               : 3s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+  opacity                          : 1;
+}
+
+.dots-pri {
+  position                         : absolute;
+  top                              : 15px;
+  left                             : 30px;
+  height                           : 20px;
+  width                            : 80px;
+  -webkit-transform                : scale(0.5);
+  -ms-transform                    : scale(0.5);
+  transform                        : scale(0.5);
+  opacity                          : 0;
+  -webkit-animation-name           : dotsDisplay-pri;
+  animation-name                   : dotsDisplay-pri;
+  -webkit-animation-duration       : 30s;
+  animation-duration               : 30s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-fill-mode      : forwards;
+  animation-fill-mode              : forwards;
+}
+
+.dots-pri .dot-pri {
+  position        : absolute;
+  display         : block;
+  top             : 0;
+  height          : 20px;
+  width           : 20px;
+  border-radius   : 50%;
+  background-color: #eee;
+}
+
+.dots-pri .dot-pri:nth-child(1) {
+  left                             : 0;
+  -webkit-animation-name           : hoppy-pri;
+  animation-name                   : hoppy-pri;
+  -webkit-animation-duration       : 1.1s;
+  animation-duration               : 1.1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count        : infinite;
+}
+
+.dots-pri .dot-pri:nth-child(2) {
+  left                             : 30px;
+  -webkit-animation-name           : hoppy-pri;
+  animation-name                   : hoppy-pri;
+  -webkit-animation-duration       : 1.1s;
+  animation-duration               : 1.1s;
+  -webkit-animation-delay          : 150ms;
+  animation-delay                  : 150ms;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count        : infinite;
+}
+
+.dots-pri .dot-pri:nth-child(3) {
+  left                             : 60px;
+  -webkit-animation-name           : hoppy-pri;
+  animation-name                   : hoppy-pri;
+  -webkit-animation-duration       : 1.1s;
+  animation-duration               : 1.1s;
+  -webkit-animation-delay          : 0.3s;
+  animation-delay                  : 0.3s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function        : ease-in;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count        : infinite;
+}
+
+@-webkit-keyframes hoppy-pri {
+  0% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 20;
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform        : translateY(-10px);
+    opacity          : 0.13;
+  }
+
+  60% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 0.5;
+  }
+}
+
+@keyframes hoppy-pri {
+  0% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 20;
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px);
+    transform        : translateY(-10px);
+    opacity          : 0.13;
+  }
+
+  60% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 0.5;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform        : translateY(0);
+    opacity          : 0.5;
+  }
+}
+
+@-webkit-keyframes dotsDisplay-pri {
+  0% {
+    opacity: 0;
+  }
+
+  1.3% {
+    opacity: 0;
+  }
+
+  1.7% {
+    opacity: 1;
+  }
+
+  19.3% {
+    opacity: 1;
+  }
+
+  19.7% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 0;
+  }
+
+  46.3% {
+    opacity: 1;
+  }
+
+  59.5% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dotsDisplay-pri {
+  0% {
+    opacity: 0;
+  }
+
+  1.3% {
+    opacity: 0;
+  }
+
+  1.7% {
+    opacity: 1;
+  }
+
+  19.3% {
+    opacity: 1;
+  }
+
+  19.7% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 0;
+  }
+
+  46.3% {
+    opacity: 1;
+  }
+
+  59.5% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bubResize-pri {
+  0% {
+    min-width: 210px;
+  }
+
+  1% {
+    min-width: 50px;
+  }
+
+  19% {
+    min-width: 50px;
+  }
+
+  20% {
+    min-width: 210px;
+  }
+
+  46% {
+    min-width: 210px;
+  }
+
+  47% {
+    min-width: 50px;
+  }
+
+  59% {
+    min-width: 50px;
+  }
+
+  60% {
+    min-width: 210px;
+  }
+}
+
+@keyframes bubResize-pri {
+  0% {
+    min-width: 210px;
+  }
+
+  1% {
+    min-width: 50px;
+  }
+
+  19% {
+    min-width: 50px;
+  }
+
+  20% {
+    min-width: 210px;
+  }
+
+  46% {
+    min-width: 210px;
+  }
+
+  47% {
+    min-width: 50px;
+  }
+
+  59% {
+    min-width: 50px;
+  }
+
+  60% {
+    min-width: 210px;
+  }
+
+  100% {
+    min-width: 210px;
+  }
+}
+
+@-webkit-keyframes bubResize-pri-sp {
+  0% {
+    min-width: 150px;
+  }
+
+  1% {
+    min-width: 50px;
+  }
+
+  19% {
+    min-width: 50px;
+  }
+
+  20% {
+    min-width: 210px;
+  }
+
+  46% {
+    min-width: 210px;
+  }
+
+  47% {
+    min-width: 50px;
+  }
+
+  59% {
+    min-width: 50px;
+  }
+
+  60% {
+    min-width: 210px;
+  }
+}
+
+@keyframes bubResize-pri-sp {
+  0% {
+    min-width: 150px;
+  }
+
+  1% {
+    min-width: 50px;
+  }
+
+  19% {
+    min-width: 50px;
+  }
+
+  20% {
+    min-width: 210px;
+  }
+
+  46% {
+    min-width: 210px;
+  }
+
+  47% {
+    min-width: 50px;
+  }
+
+  59% {
+    min-width: 50px;
+  }
+
+  60% {
+    min-width: 210px;
+  }
+
+  100% {
+    min-width: 210px;
+  }
+}
+
+@-webkit-keyframes ava1-pri {
+  0% {
+    -webkit-transform: scale(0);
+    transform        : scale(0);
+    opacity          : 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0);
+    transform        : scale(0);
+    opacity          : 0;
+  }
+
+  90% {
+    -webkit-transform: scale(1.7);
+    transform        : scale(1.7);
+    opacity          : 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform        : scale(1);
+    opacity          : 1;
+  }
+}
+
+@keyframes ava1-pri {
+  0% {
+    -webkit-transform: scale(0);
+    transform        : scale(0);
+    opacity          : 0;
+  }
+
+  80% {
+    -webkit-transform: scale(0);
+    transform        : scale(0);
+    opacity          : 0;
+  }
+
+  90% {
+    -webkit-transform: scale(1.7);
+    transform        : scale(1.7);
+    opacity          : 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform        : scale(1);
+    opacity          : 1;
+  }
+}
+
+@-webkit-keyframes ava2-pri {
+  0% {
+    opacity: 1;
+  }
+
+  97% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ava2-pri {
+  0% {
+    opacity: 1;
+  }
+
+  97% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes chat1-pri {
+  0% {
+    opacity: 1;
+  }
+
+  97% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes chat1-pri {
+  0% {
+    opacity: 1;
+  }
+
+  97% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes chatUp-pri {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+    opacity          : 1;
+  }
+
+  98% {
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+    opacity          : 1;
+  }
+
+  100% {
+    opacity          : 0;
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+  }
+}
+
+@keyframes chatUp-pri {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+    opacity          : 1;
+  }
+
+  98% {
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+    opacity          : 1;
+  }
+
+  100% {
+    opacity          : 0;
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+  }
+}
+
+@-webkit-keyframes chatUp2-pri {
+  0% {
+    opacity: 0;
+  }
+
+  52% {
+    opacity          : 0;
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+    opacity          : 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+    opacity          : 1;
+  }
+}
+
+@keyframes chatUp2-pri {
+  0% {
+    opacity: 0;
+  }
+
+  52% {
+    opacity          : 0;
+    -webkit-transform: translateY(-48px);
+    transform        : translateY(-48px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+    opacity          : 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(-96px);
+    transform        : translateY(-96px);
+    opacity          : 1;
+  }
+}
+
+@-webkit-keyframes noteUp-pri {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes noteUp-pri {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
