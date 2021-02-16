@@ -11,9 +11,11 @@
 <body>
 	<script>
             const CUSTOM_HTML_ENGAGEMENT_ID = 2159342030;
+		console.log (CUSTOM_HTML_ENGAGEMENT_ID);
+		console.log ("engagementId",lpTag.taglets.rendererStub.getEngagementInfo(2159342030));
 	    if(lpTag && lpTag.taglets && lpTag.taglets.rendererStub){
        		var info = lpTag.taglets.rendererStub.getEngagementInfo(2159342030);
-		    alert(info);
+		console.log ("info",info);
     		}
 		
 	</script>
