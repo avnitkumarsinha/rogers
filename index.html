@@ -11,29 +11,6 @@
 <body>
 	<script>
             const CUSTOM_HTML_ENGAGEMENT_ID = 2159342030;
-	
-	const CUSTOM_BUTTON_ID = "hidden_engagement";  // html ID of the custom button
-            lpTag.events.bind("lpUnifiedWindow", "state", stateCallback); // event is triggered when the state of the engagement window changes
-            lpTag.events.bind("LP_OFFERS", "START", loadedCallback); // event is triggered when the engagements are loaded into the page
-            function stateCallback(data, eventInfo){
-                // if the messaging window is initialized, hide the button
-                if (data.state == "init"){
-                    //console.log("Hide the button.");
-                    setCustomButtonVisibility(false);
-                }
-            }
-            // triggers when the engagement is loaded onto the page
-            function loadedCallback(data, eventInfo){
-                if(data.engagementId == CUSTOM_HTML_ENGAGEMENT_ID){
-                    //console.log("Make the custom button visible.");
-                    setCustomButtonVisibility(true);
-                }
-            }
-            // change the visibility of the custom button
-            function setCustomButtonVisibility(visible){
-                document.querySelector("#" + CUSTOM_BUTTON_ID).style.visibility = visible ? "visible" : "hidden";
-            }
-
         </script>
 	<div style="display: none;" id="hidden_engagement"></div>
 	
